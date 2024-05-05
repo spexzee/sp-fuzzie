@@ -7,6 +7,7 @@ import Navbar from "@/components/global/navbar";
 import { Button } from "@/components/ui/button";
 import { clients, products } from "@/lib/constant";
 import { CheckIcon } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -18,17 +19,19 @@ export default function Home() {
             <ContainerScroll
               titleComponent={
                 <div className="flex items-center flex-col gap-10">
-                  <Button className="btn" type="button">
-                    <strong>Start For Free Today</strong>
-                    <div id="container-stars">
-                      <div id="stars"></div>
-                    </div>
+                  <Link href="/sign-up">
+                    <Button className="btn" type="button">
+                      <strong>Start For Free Today</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
 
-                    <div id="glow">
-                      <div className="circle"></div>
-                      <div className="circle"></div>
-                    </div>
-                  </Button>
+                      <div id="glow">
+                        <div className="circle"></div>
+                        <div className="circle"></div>
+                      </div>
+                    </Button>
+                  </Link>
 
 
                   <h1 className="text-5xl md:text-8xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold">
