@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import { Option } from './content-based-on-title'
-import { ConnectionProviderProps } from '@/providers/connections-provider'
+import { ConnectionProviderProps } from '../../../../../../../providers/connections-provider'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { postContentToWebHook } from '@/app/(main)/(pages)/connections/_actions/discord-connection'
