@@ -79,7 +79,9 @@ const Settings = async (props: Props) => {
             />
           </div>
         ) : (
-          <div>User not found</div>
+          <div className="flex justify-center items-center h-[50vh]">
+            <h2 className="text-2xl font-bold">User not found</h2>
+          </div>
         )
       }
     </div>
