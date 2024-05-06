@@ -4,6 +4,7 @@ export default authMiddleware({
   publicRoutes: [
     '/',
     '/api/clerk-webhook',
+    '/api/drive-activity',
     '/api/drive-activity/notification',
     '/api/payment/success',
   ],
