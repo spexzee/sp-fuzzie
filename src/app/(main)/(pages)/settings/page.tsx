@@ -11,6 +11,8 @@ const Settings = async (props: Props) => {
   if (!authUser) return null
 
   const user = await db.user.findUnique({ where: { clerkId: authUser.id } })
+  if (!user) return <div>User not found</div>;
+
   const removeProfileImage = async () => {
     'use server'
     const response = await db.user.update({
