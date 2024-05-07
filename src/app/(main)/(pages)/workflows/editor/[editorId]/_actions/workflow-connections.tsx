@@ -29,9 +29,9 @@ export const onCreateNodesEdges = async (
         id: flowId,
       },
       data: {
-        nodes,
-        edges,
-        flowPath,
+        nodes : nodes,
+        edges : edges,
+        flowPath : flowPath,
         name: updatedName,
       },
     })

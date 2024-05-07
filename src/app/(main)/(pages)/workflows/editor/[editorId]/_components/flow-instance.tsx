@@ -21,12 +21,16 @@ const FlowInstance = ({ children, edges, nodes }: Props) => {
   const { nodeConnection } = useNodeConnections()
 
   const onFlowAutomation = useCallback(async () => {
+
     const flow = await onCreateNodesEdges(
       pathname.split('/').pop()!,
       JSON.stringify(nodes),
       JSON.stringify(edges),
       JSON.stringify(isFlow)
     )
+    
+    console.log('updated edge -> ' , edges )
+    console.log('updated node -> ' , nodes )
 
     if (flow) toast.message(flow.message)
   }, [nodeConnection])
